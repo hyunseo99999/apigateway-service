@@ -1,13 +1,13 @@
 plugins {
     id 'java'
-    id 'war'
-    id 'org.springframework.boot' version '3.0.5'
-    id 'io.spring.dependency-management' version '1.1.0'
+    id 'org.springframework.boot' version '2.7.12'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
+
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 configurations {
     compileOnly {
@@ -21,7 +21,7 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', "2022.0.2")
+    set('springCloudVersion', "2021.0.7")
 }
 
 dependencies {
@@ -30,7 +30,6 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
